@@ -9,7 +9,7 @@ AND "1990-12-31";
 SELECT * 
 FROM `students`  
 WHERE `date_of_birth`
-LIKE "1990-%"
+LIKE "1990-%";
 
 2) Selezionare tutti i corsi che valgono più di 10 crediti (479)
 
@@ -27,7 +27,7 @@ WHERE DATE_FORMAT(FROM_DAYS(DATEDIFF(NOW(),`students`.`date_of_birth`)), '%Y')  
 
 SELECT * 
 FROM `courses` 
-WHERE`period` = "I semestre" AND YEAR = 1
+WHERE`period` = "I semestre" AND YEAR = 1;   
 
 5) Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del 2020/06/20 (21)
 
@@ -43,13 +43,13 @@ WHERE `level` = "magistrale";
 
 7) Da quanti dipartimenti è composta l'università? (12)
 
-SELECT * 
-FROM `departments`
+SELECT COUNT(*) 
+FROM `departments`;
 
 8) Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 
-SELECT * 
+SELECT COUNT(*) AS teacher_numer 
 FROM `teachers` 
-WHERE `phone` IS NULL
+WHERE `phone` IS NULL;
 
 
